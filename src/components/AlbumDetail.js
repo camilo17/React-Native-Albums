@@ -4,12 +4,16 @@ import {
     View,
     StyleSheet
 } from 'react-native';
+import Card from './Card';
+import CardSectioin from './CardSection';
 
 const AlbumDetail = (props) => {
     return (
-        <View>
-            <Text>{props.album.title}</Text>
-        </View>
+        <Card>
+            <CardSectioin>
+                <Text>{props.album.title}</Text>
+            </CardSectioin>
+        </Card>
     )
 };
 
