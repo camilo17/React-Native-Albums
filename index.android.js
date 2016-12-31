@@ -12,12 +12,16 @@ import {
   View
 } from 'react-native';
 
-import Header from './src/header';
+import Header from './src/components/Header';
+import AlbumList from './src/components/AlbumList';
 
 export default class albums extends Component {
   render() {
     return (
-        <Header headerText ={'Albums'}/>
+        <View>
+          <Header headerText ={'Albums'}/>
+          <AlbumList/>
+        </View>
 
     );
   }
