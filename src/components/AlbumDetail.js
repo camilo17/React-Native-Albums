@@ -5,16 +5,29 @@ import {
     StyleSheet
 } from 'react-native';
 import Card from './Card';
-import CardSectioin from './CardSection';
+import CardSection from './CardSection';
 
 const AlbumDetail = (props) => {
     return (
         <Card>
-            <CardSectioin>
-                <Text>{props.album.title}</Text>
-            </CardSectioin>
+            <CardSection>
+                <View></View>
+
+                <View style={styles.headerContentStyle}>
+                    <Text>{props.album.title}</Text>
+                    <Text>{props.album.artist}</Text>
+                </View>
+
+            </CardSection>
         </Card>
     )
 };
+
+const styles = {
+    headerContentStyle: {
+        flexDirection: 'column',
+        justifyContent: 'space-around'
+    }
+}
 
 export default AlbumDetail;
